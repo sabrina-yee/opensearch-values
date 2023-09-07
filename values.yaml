@@ -5,7 +5,7 @@ imagePullSecrets:
 masterService: opensearch-cluster-master
 nodeGroup.master.data: true
 pemkeyPass: password
-replicas: 3
+replicas: 1
 image:
   repository: hclcr.io/cnx-staging
 resources:

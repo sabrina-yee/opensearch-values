@@ -1,0 +1,23 @@
+clusterName: opensearch-cluster
+createSecret: false
+imagePullSecrets:
+  - name: myregkey
+masterService: opensearch-cluster-master
+nodeGroup.master.data: true
+pemkeyPass: password
+replicas: 1
+image:
+  repository: hclcr.io/cnx-staging
+resources:
+  limits:
+    cpu: '2'
+    memory: 4096Mi
+  requests:
+    cpu: '0.5'
+    memory: 3072Mi
+roles:
+  - master
+  - ingest
+  - data
+  - remote_cluster_client
+readinessProbe: []

@@ -1,8 +1,8 @@
-clusterName: opensearch-cluster
+clusterName: opensearch-cluster-2
 createSecret: false
 imagePullSecrets:
   - name: myregkey
-masterService: opensearch-cluster-master
+masterService: opensearch-cluster-master-2
 nodeGroup.master.data: true
 pemkeyPass: password
 replicas: 1
